@@ -36,11 +36,11 @@ public class GameListController {
     return gameService.findByList(listId);
   }
 
-// Query para verificar no SGBD se o método move está funcionando corretamente.
-// SELECT TB_BELONGING  .*, TB_GAME.TITLE FROM TB_BELONGING 
-// INNER JOIN TB_GAME ON TB_GAME.ID = TB_BELONGING .GAME_ID
-// WHERE LIST_ID = 2
-// ORDER BY POSITION
+  // Query para verificar no SGBD se o método move está funcionando corretamente.
+  // SELECT TB_BELONGING .*, TB_GAME.TITLE FROM TB_BELONGING
+  // INNER JOIN TB_GAME ON TB_GAME.ID = TB_BELONGING .GAME_ID
+  // WHERE LIST_ID = 2
+  // ORDER BY POSITION
   @PostMapping(value = "/{listId}/replacement")
   public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
     gameListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
