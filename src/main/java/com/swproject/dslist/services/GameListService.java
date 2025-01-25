@@ -35,7 +35,7 @@ public class GameListService {
     int min = Math.min(sourceIndex, destinationIndex);
     int max = Math.max(sourceIndex, destinationIndex);
 
-    // Outra forma de fazer o min e max sem usar o Math 
+    // Outra forma de fazer o min e max sem usar o Math
     // int min = sourceIndex < destinationIndex ? sourceIndex : destinationIndex;
     // int max = sourceIndex > destinationIndex ? sourceIndex : destinationIndex;
 
